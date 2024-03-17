@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <canvas id="matrixCanvas" width="1072" height="1040"></canvas> <!-- Matrix -->
+    <script src="matrix.js"></script>
+
+    <header class="header">
+        <a href="#" class="logo">{Portfolio} </a>
+        <nav class="navbar">
+            <a href="index.html" title="Home"style="--i:1;"><i class="fas fa-home"></i></a>
+            <a href="about.html"title="About" style="--i:2;"><i class="fas fa-user"></i></a>
+            <a href="skills.html"title="Skills" style="--i:3;"><i class="fas fa-cogs"></i></a>
+            <!-- <a href="#project"title="Projects" style="--i:4;"><i class="fas fa-project-diagram"></i></a> -->
+            <!-- <a href="contactme.html" title="Contact us"style="--i:5;"><i class="fas fa-envelope"></i></a> -->
+        </nav>
+        
+    </header>
+
+<div class="container">
+    <!-- Top Content -->
+    <div class="top-content">
+        <h1>Welcome to our Question Form</h1>
+        <p>Please feel free to ask any questions you may have.</p>
+    </div>
+
+    <!-- Form -->
+    <form id="question-form">
+        <div class="form-group">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Your Email:</label>
+            <input type="text" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="question">Your Question:</label>
+            <textarea id="question" name="question" rows="5" required>Active soon.....Under Maintanance....</textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit Question">
+        </div>
+    </form>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!-- Add more social media icons as needed -->
+    </div>
+</div>
+
+<style>
+body {
+    margin: auto;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-group input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ff00; /* Green */
+    color: #000;
+    cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #00ff00; /* Green */
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+
+/* Matrix background */
+body::before {
+    content: '';
+    position: fixed;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    background: url('matrix_background.jpg'); /* Your matrix-like background image */
+    background-size:auto;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;margin-top: 100px; /* Added spacing from the header */
+    }
+
+
+    .header .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+/* Header */
+.header {
+    background-color: #222;
+    padding: 20px;
+}
+
+.header .logo {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header .navbar a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header .navbar a.active {
+    font-weight: bold;
+}}
+/* For mobile */
+@media screen and (max-width: 768px) {
+   
+}
+
+@media screen and (max-width: 768px) {
+  
+
+    .header .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<script>
+$(document).ready(function(){
+    $('.menu-toggle').click(function(){
+        $(this).toggleClass('active');
+        $('.navbar').toggleClass('active');
+    });
+});
+
+</script>
+
+</body>
+</html>

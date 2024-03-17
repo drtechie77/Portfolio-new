@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- External JavaScript libraries -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Matrix background -->
+    <canvas id="matrixCanvas" width="1072" height="1040"></canvas>
+    <script src="matrix.js"></script>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">{Portfolio} </a>
+        <!-- Navigation links -->
+        <nav class="navbar">
+            <a href="index.html" title="Home"style="--i:1;"><i class="fas fa-home"></i></a>
+            <!-- <a href="about.html"title="About" style="--i:2;"><i class="fas fa-user"></i></a> -->
+            <a href="skills.html"title="Skills" style="--i:3;"><i class="fas fa-cogs"></i></a>
+            <!-- <a href="#project"title="Projects" style="--i:4;"><i class="fas fa-project-diagram"></i></a> -->
+            <a href="contactme.html" title="Contact us"style="--i:5;"><i class="fas fa-envelope"></i></a>
+        </nav>
+        
+    </header>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Top Content -->
+        <div class="top-content">
+            <h1>Welcome to our Question Form</h1>
+            <p style="background-color: rgb(red, rgb(23, 235, 23), rgb(16, 16, 150));color: rgb(233, 84, 84);">
+                &emsp; &emsp;This portfolio highlights my passion for cybersecurity and my commitment to ethical practices. <br> <br>
+                &emsp; &emsp;I have acquired fundamental knowledge and skills in various areas of ethical hacking, 
+                allowing me to contribute to the security of organizations and individuals. <br> <br>
+                &emsp; &emsp;Hacked multiple Wifi network that were based on WPS protocol.  
+            </p>
+            <p>Please feel free to ask any questions you may have.</p>
+        </div>
+
+        <!-- TryHackMe Badge -->
+        <div class="logo-container">
+            <!-- <img src="https://tryhackme-badges.s3.amazonaws.com/afzaln.png" alt="TryHackMe"> -->
+            <script src="https://tryhackme.com/badge/2017455"></script>
+        </div>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!-- Add more social media icons as needed -->
+    </div>
+
+    <!-- Custom CSS -->
+    <style>
+        /* General styling */
+        body {
+            margin: auto;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input[type="text"],
+        .form-group textarea {
+            width: calc(100% - 20px); /* Adjusted width to accommodate margin */
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .form-group input[type="submit"] {
+            width: 100%; /* Make submit button full width */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #00ff00; /* Green */
+            color: #000;
+            cursor: pointer;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #00ff00; /* Green */
+        }
+
+        .social-icons a:last-child {
+            margin-right: 0;
+        }
+
+        /* Matrix background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: auto;
+            left: auto;
+            width: auto;
+            height: auto;
+            background: url('matrix_background.jpg'); /* Your matrix-like background image */
+            background-size:auto;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Header */
+        .header {
+            background-color: #222;
+            padding: 20px;
+            position: relative; /* Ensure the z-index works */
+            z-index: 2; /* Set a higher z-index */
+        }
+
+        .header .logo {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .header .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .header .navbar a {
+            margin: 0 10px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .header .navbar a.active {
+            font-weight: bold;
+        }
+
+        /* Matrix canvas styling */
+        canvas {
+            position: fixed;
+            top: auto;
+            left: auto;
+            background-color: black;
+            z-index: -1;
+            background-size: cover;
+            background-blend-mode: multiply;
+            background-size: 100px;
+            scroll-behavior: smooth;
+        }
+
+        /* Toggle Button */
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 24px;
+            z-index: 3; /* Ensure the toggle is above other elements */
+            display: none; /* Initially hide toggle button */
+        }
+
+        /* Mobile styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                margin: 20px auto;
+                margin-top: 100px; /* Added spacing from the header */
+            }
+
+            /* .header .navbar {
+                display: none; /* Hide the navbar in mobile */
+            } */
+
+          
+        
+
+        /* Logo container styling */
+        .logo-container {
+            display: flex;
+            align-items: center; /* Align items vertically center */
+            margin-bottom: 20px; /* Add margin bottom for spacing */
+        }
+          
+        .logo-container img {
+            margin-right: 10px; /* Adjust margin as needed */
+        }@media screen and (max-width: 768px) {
+  
+
+    .header .navbar.active {
+        display: flex;
+        flex-direction: column;
+    }
+}
+    </style>
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Toggle menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navbar = document.querySelector('.navbar');
+
+            menuToggle.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
